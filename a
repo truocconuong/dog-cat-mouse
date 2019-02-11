@@ -1,0 +1,49 @@
+[1mdiff --git a/Dog.js b/Dog.js[m
+[1mindex ab49586..6b05f2f 100644[m
+[1m--- a/Dog.js[m
+[1m+++ b/Dog.js[m
+[36m@@ -1,8 +1,12 @@[m
+ var chalk = require('chalk')[m
+ function Dog(name){[m
+ 	this.name = name;[m
+[32m+[m	[32mthis.stomath = [];[m
+ }[m
+ Dog.prototype.sayHi = function(){[m
+ 	console.log("Hello các bạn tôi tên là "+chalk.red(this.name))[m
+ };[m
+[32m+[m[32mDog.prototype.eat = function(meo){[m
+[32m+[m	[32mthis.stomath.push(meo)[m
+[32m+[m[32m};[m
+ module.exports = Dog;[m
+\ No newline at end of file[m
+[1mdiff --git a/check.js b/check.js[m
+[1mindex 4288a65..21226b8 100644[m
+[1m--- a/check.js[m
+[1m+++ b/check.js[m
+[36m@@ -1,3 +1,7 @@[m
+ var Dog = require('./Dog');[m
+ var dog = new Dog('Mạnh');[m
+[31m-dog.sayHi();[m
+\ No newline at end of file[m
+[32m+[m[32mvar Mew = require ('./index')[m
+[32m+[m[32mvar mew = new Mew('Híc');[m
+[32m+[m[32mdog.sayHi();[m
+[32m+[m[32mdog.eat(mew);[m
+[32m+[m[32mconsole.log(dog)[m
+\ No newline at end of file[m
+[1mdiff --git a/index.js b/index.js[m
+[1mindex 682c069..c847a16 100644[m
+[1m--- a/index.js[m
+[1m+++ b/index.js[m
+[36m@@ -1,8 +1,5 @@[m
+[31m-function Cat (){[m
+[31m-	this.smocath = [][m
+[32m+[m[32mfunction Cat (name){[m
+[32m+[m	[32mthis.name=name[m
+ 	this.dead = false[m
+ }[m
+[31m-Cat.prototype.die =function(){[m
+[31m-	this.dead=false;[m
+[31m-}[m
+[31m-}[m
+[32m+[m[32mmodule.exports = Cat;[m

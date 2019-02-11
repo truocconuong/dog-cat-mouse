@@ -1,8 +1,5 @@
-function Cat (){
-	this.smocath = []
+function Cat (name){
+	this.name=name
 	this.dead = false
 }
-Cat.prototype.die =function(){
-	this.dead=false;
-}
-}
+module.exports = Cat;
